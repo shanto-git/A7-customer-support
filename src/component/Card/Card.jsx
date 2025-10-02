@@ -10,36 +10,58 @@ const Card = ({ tickets, handleCard, inProgress, handleComplete, resolve }) => {
         {/* 1st card */}
         <div className="lg:col-span-9 gap-4 grid grid-cols-1 md:grid-cols-2">
           {tickets.length > 0 ? (
-            tickets.map((ticket) => (
-              <div key={ticket.id} className="col-span-1">
-                <div className="card w-full bg-base-100 card-xs shadow-sm">
-                  <div onClick={() => handleCard(ticket)} className="card-body">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-bold text-sm">{ticket.title}</h3>
-                      <h3 className="bg-green-300 text-green-800 w-auto h-auto pl-1 pr-2 rounded-full text-sm font-bold">
-                        <i className="fa-solid fa-circle"></i> {ticket.status}
-                      </h3>
-                    </div>
-                    <p>{ticket.description}</p>
-                    <div className="flex justify-between gap-5 items-center text-gray-500 mt-4">
-                      <div className="flex gap-2 items-center">
-                        <p>#{ticket.id}</p>
-                        <h3 className="text-red-500 font-semibold">
-                          {ticket.priority.toUpperCase()} PRIORITY
+            tickets.map((ticket) => {
+              
+              const statusColor =
+                  ticket.status === "In-Progress"
+                  ? "bg-yellow-200 text-yellow-600"
+                  : ticket.status.toLowerCase() === "open"
+                  ? "bg-green-300 text-green-800"
+                  : "bg-green-300 text-green-800"; 
+
+              const priorityColor =
+                ticket.priority.toLowerCase() === "high"
+                  ? "text-red-500"
+                  : ticket.priority.toLowerCase() === "low"
+                  ? "text-green-500"
+                  : "text-yellow-500"; 
+
+              return (
+                <div key={ticket.id} className="col-span-1">
+                  <div className="card w-full bg-base-100 card-xs shadow-sm">
+                    <div
+                      onClick={() => handleCard(ticket)}
+                      className="card-body"
+                    >
+                      <div className="flex items-center justify-between">
+                        <h3 className="font-bold text-sm">{ticket.title}</h3>
+                        <h3
+                          className={`${statusColor} w-auto h-auto pl-1 pr-2 rounded-full text-sm font-bold`}
+                        >
+                          <i className="fa-solid fa-circle"></i> {ticket.status}
                         </h3>
                       </div>
-                      <div className="flex gap-2 items-center">
-                        <p>{ticket.customer}</p>
-                        <p className="flex items-center gap-1">
-                          <i className="fa-regular fa-calendar"></i>
-                          {ticket.createdAt}{" "}
-                        </p>
+                      <p>{ticket.description}</p>
+                      <div className="flex justify-between gap-5 items-center text-gray-500 mt-4">
+                        <div className="flex gap-2 items-center">
+                          <p>#{ticket.id}</p>
+                          <h3 className={`${priorityColor} font-semibold`}>
+                            {ticket.priority.toUpperCase()} PRIORITY
+                          </h3>
+                        </div>
+                        <div className="flex gap-2 items-center">
+                          <p>{ticket.customer}</p>
+                          <p className="flex items-center gap-1">
+                            <i className="fa-regular fa-calendar"></i>
+                            {ticket.createdAt}{" "}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           ) : (
             <div>
               <p className="text-gray-500">No tickets available</p>

@@ -14,7 +14,7 @@
     "description": "User cannot log in with valid credentials, showing unexpected error.",
     "customer": "Sarah Johnson",
     "priority": "High",
-    "status": "In Progress",
+    "status": "In-Progress",
     "createdAt": "2024-01-20"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Uploading images fails with error code 500.",
     "customer": "Daniel Anderson",
     "priority": "Medium",
-    "status": "In Progress",
+    "status": "In-Progress",
     "createdAt": "2024-01-27"
   },
   {
