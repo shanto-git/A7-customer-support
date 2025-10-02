@@ -105,7 +105,7 @@ const Card = ({ tickets, handleCard, inProgress, handleComplete, resolve }) => {
               resolve.map((ticket) => (
                 <div
                   key={ticket.id}
-                  className="bg-blue-200 w-full h-16 p-1 rounded-xl shadow-xl mb-2"
+                  className="bg-green-200 w-full h-16 p-1 rounded-xl shadow-xl mb-2"
                 >
                   <p className="font-bold text-md">{ticket.title}</p>
                   <p className="text-gray-600 text-sm">has been Completed</p>
