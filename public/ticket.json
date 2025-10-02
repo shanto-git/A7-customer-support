@@ -1,0 +1,92 @@
+[
+  {
+    "id": 101,
+    "title": "App Crash on Launch",
+    "description": "Customer reports that the app crashes immediately on Android 13.",
+    "customer": "David Wilson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-01-19"
+  },
+  {
+    "id": 102,
+    "title": "Login Not Working",
+    "description": "User cannot log in with valid credentials, showing unexpected error.",
+    "customer": "Sarah Johnson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2024-01-20"
+  },
+  {
+    "id": 103,
+    "title": "Payment Gateway Timeout",
+    "description": "Checkout payments are timing out for multiple users.",
+    "customer": "Michael Lee",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-01-22"
+  },
+  {
+    "id": 104,
+    "title": "Slow Loading Dashboard",
+    "description": "Dashboard takes more than 10 seconds to load after login.",
+    "customer": "Emily Davis",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-01-23"
+  },
+  {
+    "id": 105,
+    "title": "Notification Emails Not Sent",
+    "description": "Users are not receiving notification emails after order placement.",
+    "customer": "James Miller",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2024-01-25"
+  },
+  {
+    "id": 106,
+    "title": "Search Feature Bug",
+    "description": "Search results are not updating when keywords change.",
+    "customer": "Sophia Brown",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2024-01-26"
+  },
+  {
+    "id": 107,
+    "title": "File Upload Error",
+    "description": "Uploading images fails with error code 500.",
+    "customer": "Daniel Anderson",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2024-01-27"
+  },
+  {
+    "id": 108,
+    "title": "Profile Update Not Saving",
+    "description": "Changes made to user profiles are not being saved.",
+    "customer": "Olivia Martinez",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-01-28"
+  },
+  {
+    "id": 109,
+    "title": "Broken Links on Homepage",
+    "description": "Some homepage links return 404 errors.",
+    "customer": "William Thomas",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2024-01-30"
+  },
+  {
+    "id": 110,
+    "title": "Two-Factor Authentication Failing",
+    "description": "2FA codes are not being accepted on login.",
+    "customer": "Isabella Garcia",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2024-02-01"
+  }
+]
