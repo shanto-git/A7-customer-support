@@ -10,3 +10,5 @@ ans.useState is a react hook it's work to manage state in functional component
 4.How can you share state between components in React?
 ans. A state declare to parent and received a child component
 
+5.How is event handling done in React?
+ans.event handling done in React onClick
